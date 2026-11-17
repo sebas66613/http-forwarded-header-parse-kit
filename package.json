@@ -1,0 +1,17 @@
+{
+  "name": "http-forwarded-header-parse-kit",
+  "version": "0.1.0",
+  "description": "Parses the RFC 7239 Forwarded header into an ordered chain of proxy hops, decoding quoted-string values and preserving the raw text of each parameter.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "BSD-3-Clause",
+  "dependencies": {}
+}
