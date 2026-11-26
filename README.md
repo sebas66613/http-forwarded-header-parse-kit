@@ -51,3 +51,10 @@ string `[2001:db8::1]:8080` — the IPv6 brackets and port are preserved as-is,
 because RFC 7239 does not ask the parser to split them apart. If you need the
 address and port separately, split on the last colon yourself, and remember
 that a bare IPv6 address contains colons too.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
